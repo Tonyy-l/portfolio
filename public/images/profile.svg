@@ -1,0 +1,18 @@
+<svg width="1200" height="1400" viewBox="0 0 1200 1400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="1400" rx="72" fill="#0D1320"/>
+  <circle cx="860" cy="250" r="240" fill="#7DD3FC" fill-opacity="0.18"/>
+  <circle cx="300" cy="1080" r="300" fill="#A78BFA" fill-opacity="0.16"/>
+  <rect x="120" y="140" width="960" height="1120" rx="56" fill="url(#paint0_linear)" fill-opacity="0.5" stroke="#243049"/>
+  <circle cx="600" cy="520" r="180" fill="#111A2B" stroke="#2B3A59" stroke-width="10"/>
+  <circle cx="600" cy="470" r="72" fill="#7DD3FC" fill-opacity="0.22"/>
+  <path d="M420 928C450 804 520 740 600 740C680 740 750 804 780 928" stroke="#EAF0FF" stroke-opacity="0.78" stroke-width="18" stroke-linecap="round"/>
+  <path d="M506 956C533 910 566 884 600 884C634 884 667 910 694 956" stroke="#7DD3FC" stroke-opacity="0.95" stroke-width="16" stroke-linecap="round"/>
+  <text x="600" y="1220" fill="#EAF0FF" font-family="Arial, sans-serif" font-size="56" font-weight="700" text-anchor="middle">Profile Image</text>
+  <text x="600" y="1285" fill="#9BA9C7" font-family="Arial, sans-serif" font-size="34" text-anchor="middle">Placeholder</text>
+  <defs>
+    <linearGradient id="paint0_linear" x1="200" y1="160" x2="1000" y2="1220" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#111A2B"/>
+      <stop offset="1" stop-color="#070B14"/>
+    </linearGradient>
+  </defs>
+</svg>
