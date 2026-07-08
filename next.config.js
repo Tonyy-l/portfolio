@@ -1,5 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+    
+  serverExternalPackages: ["@prisma/client", "pg"],
   images: {
     formats: ['image/avif', 'image/webp']
   },
@@ -7,4 +9,7 @@ const nextConfig = {
 
 };
 
-module.exports = nextConfig;
+
+
+
+export default nextConfig;
