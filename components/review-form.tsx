@@ -14,7 +14,7 @@ export function ReviewForm() {
   return (
     <form action={action} className="rounded-3xl border border-line bg-panel p-6 shadow-card">
       <p className="text-xs font-semibold uppercase tracking-[0.3em] text-accent">Добави ревю</p>
-      <h3 className="mt-3 text-xl font-semibold text-text">Пиши мнение и оцени с 1 до 5</h3>
+      <h3 className="mt-3 text-xl font-semibold text-text">Напиши своето мнение и оцени с 1 до 5</h3>
 
       <div className="mt-6 space-y-4">
         <label className="block">

@@ -24,6 +24,10 @@ const config: Config = {
           'radial-gradient(circle at top, rgba(125, 211, 252, 0.16), transparent 35%), radial-gradient(circle at 80% 20%, rgba(167, 139, 250, 0.14), transparent 22%), linear-gradient(180deg, #05070d 0%, #070B14 100%)'
       },
       keyframes: {
+        'loading-letter': {
+          '0%, 100%': { opacity: '0.3', transform: 'translateY(0)' },
+          '50%': { opacity: '1', transform: 'translateY(-8px)' }
+        },
         float: {
           '0%, 100%': { transform: 'translateY(0px)' },
           '50%': { transform: 'translateY(-8px)' }
@@ -35,7 +39,8 @@ const config: Config = {
       },
       animation: {
         float: 'float 7s ease-in-out infinite',
-        fadeUp: 'fadeUp 0.7s ease-out both'
+        fadeUp: 'fadeUp 0.7s ease-out both',
+        'loading-letter': 'loading-letter 1s ease-in-out infinite'
       }
     }
   },

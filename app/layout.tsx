@@ -4,6 +4,8 @@ import { SiteFooter } from '@/components/site-footer';
 import { SiteHeader } from '@/components/site-header';
 import { site } from '@/lib/site';
 import './globals.css';
+import { LoadingScreen } from '@/components/loading-screen';
+
 
 const bodyFont = Manrope({ subsets: ['latin', 'cyrillic'], variable: '--font-body', display: 'swap' });
 const headingFont = Montserrat({ subsets: ['latin', 'cyrillic'], variable: '--font-heading', display: 'swap' });
@@ -40,6 +42,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="bg" className={`${bodyFont.variable} ${headingFont.variable}`} suppressHydrationWarning>
       <body className="bg-radial-glow font-sans text-text antialiased" suppressHydrationWarning>
         <SiteHeader brand={site.name} navigation={[...site.navigation]} contactLabel="Поискай оферта" />
+        <LoadingScreen/>
         <main>{children}</main>
         <SiteFooter
           phoneLabel={site.contact.phoneLabel}
