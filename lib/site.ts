@@ -8,15 +8,16 @@ export const site = {
     phoneLabel: '0898240305',
     phone: '0898240305',
     email: '',
-    linkedIn: 'www.linkedin.com/in/tony-lesov-48286b293',
-    github: 'https://github.com/toni-lesov'
+    linkedIn: 'https://www.linkedin.com/in/tony-lesov-48286b293',
+    github: 'https://github.com/tonyy-l'
   },
-  navigation: [
-    { label: 'Услуги', href: '#uslugi' },
-    { label: 'Портфолио', href: '#portfolio' },
-    { label: 'За мен', href: '#za-men' },
-    { label: 'Контакти', href: '#kontakti' },
-    { label: 'Отзиви', href: '#otzivi' }
+   navigation: [
+  { label: 'Услуги', section: 'uslugi' },
+  { label: 'Портфолио', section: 'portfolio' },
+  { label: 'За мен', section: 'za-men' },
+  { label: 'Контакти', section: 'kontakti' },
+  { label: 'Отзиви', section: 'otzivi' }
+
   ],
   hero: {
     eyebrow: 'Премиум уеб решения за българския пазар',

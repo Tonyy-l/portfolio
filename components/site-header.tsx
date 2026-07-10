@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { useRouter, usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { cn } from '@/lib/utils';
 import type { NavItem } from '@/types/content';
@@ -14,13 +14,34 @@ type SiteHeaderProps = {
 
 export function SiteHeader({ brand, navigation, contactLabel }: SiteHeaderProps) {
   const pathname = usePathname();
+  const router = useRouter();
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
     setOpen(false);
   }, [pathname]);
 
-  const resolveHref = (href: string) => (href.startsWith('http') || href.startsWith('/') ? href : '/' + href);
+  // ако идваме от друга страница със заявка за скрол, изпълняваме я тук
+  useEffect(() => {
+    const target = sessionStorage.getItem('scrollTarget');
+    if (target && pathname === '/') {
+      sessionStorage.removeItem('scrollTarget');
+      requestAnimationFrame(() => {
+        document.getElementById(target)?.scrollIntoView({ behavior: 'smooth' });
+      });
+    }
+  }, [pathname]);
+
+  const goToSection = (section: string) => {
+    setOpen(false);
+
+    if (pathname === '/') {
+      document.getElementById(section)?.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      sessionStorage.setItem('scrollTarget', section);
+      router.push('/');
+    }
+  };
 
   return (
     <header className="sticky top-0 z-50 border-b border-line bg-bg/80 backdrop-blur-xl">
@@ -31,16 +52,20 @@ export function SiteHeader({ brand, navigation, contactLabel }: SiteHeaderProps)
 
         <nav className="hidden items-center gap-8 lg:flex">
           {navigation.map((item) => (
-            <Link key={item.href} href={resolveHref(item.href)} className="text-sm text-muted transition hover:text-text">
+            <button
+              key={item.section}
+              onClick={() => goToSection(item.section)}
+              className="text-sm text-muted transition hover:text-text"
+            >
               {item.label}
-            </Link>
+            </button>
           ))}
-          <Link
-            href="/#kontakti"
+          <button
+            onClick={() => goToSection('kontakti')}
             className="rounded-full border border-accent/30 bg-accent/10 px-4 py-2 text-sm font-medium text-text transition hover:border-accent/60 hover:bg-accent/15"
           >
             {contactLabel}
-          </Link>
+          </button>
         </nav>
 
         <button
@@ -62,13 +87,20 @@ export function SiteHeader({ brand, navigation, contactLabel }: SiteHeaderProps)
       <div className={cn('border-t border-line bg-panel/95 lg:hidden', open ? 'block' : 'hidden')}>
         <div className="mx-auto flex max-w-7xl flex-col gap-2 px-4 py-4 sm:px-6">
           {navigation.map((item) => (
-            <Link key={item.href} href={resolveHref(item.href)} className="rounded-xl px-3 py-3 text-sm text-text transition hover:bg-white/5">
+            <button
+              key={item.section}
+              onClick={() => goToSection(item.section)}
+              className="rounded-xl px-3 py-3 text-left text-sm text-text transition hover:bg-white/5"
+            >
               {item.label}
-            </Link>
+            </button>
           ))}
-          <Link href="/#kontakti" className="mt-2 rounded-xl bg-accent px-4 py-3 text-center text-sm font-semibold text-slate-950">
+          <button
+            onClick={() => goToSection('kontakti')}
+            className="mt-2 rounded-xl bg-accent px-4 py-3 text-center text-sm font-semibold text-slate-950"
+          >
             {contactLabel}
-          </Link>
+          </button>
         </div>
       </div>
     </header>

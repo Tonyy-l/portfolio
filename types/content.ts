@@ -1,6 +1,6 @@
 ﻿export type NavItem = {
   label: string;
-  href: string;
+  section: string;
 };
 
 export type SocialLink = {
