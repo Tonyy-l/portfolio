@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useState, type FormEvent } from 'react';
 import { buildMailtoLink } from '@/lib/utils';
@@ -21,8 +21,8 @@ type ContactFormProps = {
     email: string;
     message: string;
   };
-  projectTypes: string[];
-  budgets: string[];
+  projectTypes: readonly string[];
+  budgets: readonly string[];
   submitLabel: string;
   successMessage: string;
   errorMessage: string;
@@ -190,7 +190,7 @@ type SelectFieldProps = {
   label: string;
   value: string;
   onChange: (value: string) => void;
-  options: string[];
+  options: readonly string[];
 };
 
 function SelectField({ label, value, onChange, options }: SelectFieldProps) {

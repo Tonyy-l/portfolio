@@ -11,7 +11,6 @@ export type SocialLink = {
 export type Service = {
   title: string;
   description: string;
-  benefits: string[];
 };
 
 export type Project = {
@@ -28,13 +27,6 @@ export type Project = {
   solution: string;
   gallery: string[];
   result: string;
-};
-
-export type Testimonial = {
-  name: string;
-  company: string;
-  quote: string;
-  rating: number;
 };
 
 export type ReviewStatus = 'PENDING' | 'APPROVED' | 'REJECTED';

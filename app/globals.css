@@ -1,9 +1,41 @@
-@tailwind base;
+﻿@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
   color-scheme: dark;
+  --color-bg: 7 11 20;
+  --color-panel: 13 19 32;
+  --color-panel-alt: 17 26 43;
+  --color-line: 148 163 184;
+  --color-text: 234 240 255;
+  --color-muted: 155 169 199;
+  --color-accent: 125 211 252;
+  --color-accent-2: 167 139 250;
+  --color-success: 52 211 153;
+  --color-grid: 148 163 184;
+  --bg-radial-glow:
+    radial-gradient(circle at top, rgba(125, 211, 252, 0.16), transparent 35%),
+    radial-gradient(circle at 80% 20%, rgba(167, 139, 250, 0.14), transparent 22%),
+    linear-gradient(180deg, #05070d 0%, #070b14 100%);
+}
+
+html[data-theme='light'] {
+  color-scheme: light;
+  --color-bg: 247 250 255;
+  --color-panel: 255 255 255;
+  --color-panel-alt: 243 247 255;
+  --color-line: 203 213 225;
+  --color-text: 15 23 42;
+  --color-muted: 71 85 105;
+  --color-accent: 14 165 233;
+  --color-accent-2: 139 92 246;
+  --color-success: 16 185 129;
+  --color-grid: 148 163 184;
+  --bg-radial-glow:
+    radial-gradient(circle at top, rgba(14, 165, 233, 0.16), transparent 32%),
+    radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.12), transparent 20%),
+    linear-gradient(180deg, #f8fbff 0%, #eef3fb 100%);
 }
 
 html {
@@ -12,8 +44,8 @@ html {
 
 body {
   min-height: 100vh;
-  background: #070b14;
-  color: #eaf0ff;
+  background: rgb(var(--color-bg));
+  color: rgb(var(--color-text));
   font-family: var(--font-body), system-ui, sans-serif;
 }
 
@@ -36,10 +68,11 @@ h6 {
 
 .bg-grid {
   background-image:
-    linear-gradient(rgba(148, 163, 184, 0.07) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(148, 163, 184, 0.07) 1px, transparent 1px);
+    linear-gradient(rgba(var(--color-grid), 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(var(--color-grid), 0.07) 1px, transparent 1px);
   background-size: 44px 44px;
 }
+
 @keyframes draw {
   0% {
     stroke-dashoffset: 300;

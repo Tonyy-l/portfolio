@@ -1,4 +1,4 @@
-export const site = {
+﻿export const site = {
   name: 'Тони Лесов',
   title: 'Фрийланс уеб разработчик и Shopify специалист',
   description:
@@ -7,23 +7,22 @@ export const site = {
   contact: {
     phoneLabel: '0898240305',
     phone: '0898240305',
-    email: '',
+    email: 'tonylsv99@gmail.com',
     linkedIn: 'https://www.linkedin.com/in/tony-lesov-48286b293',
     github: 'https://github.com/tonyy-l'
   },
-   navigation: [
-  { label: 'Услуги', section: 'uslugi' },
-  { label: 'Портфолио', section: 'portfolio' },
-  { label: 'За мен', section: 'za-men' },
-  { label: 'Контакти', section: 'kontakti' },
-  { label: 'Отзиви', section: 'otzivi' }
-
+  navigation: [
+    { label: 'Услуги', section: 'uslugi' },
+    { label: 'Портфолио', section: 'portfolio' },
+    { label: 'За мен', section: 'za-men' },
+    { label: 'Контакти', section: 'kontakti' },
+    { label: 'Отзиви', section: 'otzivi' }
   ],
   hero: {
-    eyebrow: 'Премиум уеб решения за българския пазар',
-    title: 'Изработвам модерни уебсайтове и Shopify магазини, които помагат на бизнеса да расте.',
+    eyebrow: 'Уеб разработка',
+    title: 'Уебсайтове, изградени с грижа за детайла и резултата.',
     subtitle:
-      'Създавам бързи, SEO оптимизирани и продажбено ориентирани сайтове за компании, експерти и онлайн магазини, които искат да изглеждат убедително и да превръщат посетителите в клиенти.',
+      'Разработвам сайтове за фирми, специалисти и ресторанти - с модерни технологии, бърза работа и дизайн, който печели доверие.',
     primaryCta: 'Поискай оферта',
     secondaryCta: 'Виж проектите'
   },
@@ -41,11 +40,10 @@ export const site = {
     experience: [
       'Опит с корпоративни сайтове, лендинги и Shopify проекти',
       'Изграждане на структури за по-добро SEO и повече запитвания',
-      'Редизайн на съществуващи уебсайтове с фокус върху конверсии'
+      'Редизайн на съществуващи уебсайтове с фокус върху конверсия'
     ],
     skills: ['UI/UX ориентиран подход', 'Shopify настройка и оптимизация', 'Next.js разработки', 'SEO и performance'],
-    technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Shopify', 'SEO', 'Responsive design'],
-    image: '/images/profile.png'
+    technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Shopify', 'SEO', 'Responsive design']
   },
   form: {
     eyebrow: 'Контакти',

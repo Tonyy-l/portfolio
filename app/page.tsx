@@ -118,15 +118,6 @@ export default async function HomePage() {
                 <p className="mt-3 text-sm leading-6 text-muted">
                   {service.description}
                 </p>
-
-                <ul className="mt-5 space-y-3 text-sm text-text">
-                  {service.benefits.map((benefit) => (
-                    <li key={benefit} className="flex items-start gap-3">
-                      <span className="mt-1 h-2 w-2 rounded-full bg-accent" />
-                      <span>{benefit}</span>
-                    </li>
-                  ))}
-                </ul>
               </article>
             </Reveal>
           ))}
@@ -186,13 +177,49 @@ export default async function HomePage() {
       >
         <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">
           <Reveal>
-            <img
-              src={site.about.image}
-              alt="Профилна снимка"
-              className="h-full min-h-[420px] w-full rounded-[2rem] border border-line object-cover shadow-card"
-            />
-          </Reveal>
+  <div className="rounded-[2rem] border border-line bg-panel/80 p-5 shadow-card">
+    <div className="rounded-[1.5rem] border border-line bg-gradient-to-br from-accent/10 via-panel to-accent2/10 p-6">
+      <p className="text-xs font-semibold uppercase tracking-[0.35em] text-accent">
+        Бърз поглед
+      </p>
 
+      <h2 className="mt-4 text-2xl font-semibold tracking-tight text-text">
+        Резултати, структура и бърза комуникация.
+      </h2>
+
+      <p className="mt-4 text-sm leading-6 text-muted">
+        Фокусът ми е върху сайтове, които изглеждат чисто, работят бързо и
+        водят до реални заявки.
+      </p>
+
+      <div className="mt-6 grid gap-3">
+        <div className="flex items-start gap-3 rounded-2xl border border-line bg-white/5 p-4">
+          <span className="mt-0.5 text-lg font-semibold text-accent">01</span>
+          <div>
+            <p className="text-sm font-medium text-text">Бърза изработка</p>
+            <p className="mt-1 text-sm text-muted">От няколко дни за малки сайтове до няколко седмици при по-сложни проекти.</p>
+          </div>
+        </div>
+
+        <div className="flex items-start gap-3 rounded-2xl border border-line bg-white/5 p-4">
+          <span className="mt-0.5 text-lg font-semibold text-accent">02</span>
+          <div>
+            <p className="text-sm font-medium text-text">Индивидуален дизайн</p>
+            <p className="mt-1 text-sm text-muted">Без готови шаблони — всеки сайт е съобразен с бранда.</p>
+          </div>
+        </div>
+
+        <div className="flex items-start gap-3 rounded-2xl border border-line bg-white/5 p-4">
+          <span className="mt-0.5 text-lg font-semibold text-accent">03</span>
+          <div>
+            <p className="text-sm font-medium text-text">Бърза комуникация</p>
+            <p className="mt-1 text-sm text-muted">Отговор до 24 часа на всяко запитване.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Reveal>
           <Reveal delay={120}>
             <SectionHeading
               eyebrow={site.about.eyebrow}
@@ -308,8 +335,8 @@ export default async function HomePage() {
               email={site.contact.email}
               labels={site.form.fields}
               placeholders={site.form.placeholders}
-              projectTypes={[...site.form.projectTypes]}
-              budgets={[...site.form.budgets]}
+              projectTypes={site.form.projectTypes}
+              budgets={site.form.budgets}
               submitLabel={site.form.submitLabel}
               successMessage={site.form.successMessage}
               errorMessage={site.form.errorMessage}
@@ -366,4 +393,8 @@ export default async function HomePage() {
     </>
   );
 }
+
+
+
+
 

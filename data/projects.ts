@@ -1,11 +1,12 @@
-import type { Project } from '@/types/content';
+﻿import type { Project } from '@/types/content';
 
 export const projects: Project[] = [
   {
     slug: 'bagerni-uslugi',
     name: 'Багерни услуги',
     category: 'Фирмен уебсайт',
-    description: 'Представителен сайт за багерни услуги с ясно подредени услуги, контакт и призив към действие за бързо запитване.',
+    description:
+      'Представителен сайт за багерни услуги с ясно подредени услуги, контакт и призив към действие за бързо запитване.',
     technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'SEO'],
     link: 'https://tenev-invest-group.bg',
     image: '/images/projects/logotransperant.png',
@@ -21,7 +22,8 @@ export const projects: Project[] = [
     slug: 'detski-obrazovatelni-igrachki',
     name: 'Детски образователни играчки и книжки',
     category: 'Shopify магазин',
-    description: 'Shopify магазин за детски образователни играчки и книжки с фокус върху лесно пазаруване, ясни колекции и мобилни продажби.',
+    description:
+      'Shopify магазин за детски образователни играчки и книжки с фокус върху лесно пазаруване, ясни колекции и мобилни продажби.',
     technologies: ['Shopify', 'Liquid', 'SEO', 'Responsive design'],
     link: 'https://kidsprouts.store/',
     image: '/images/projects/KidSproutsLogo.png',
@@ -37,7 +39,8 @@ export const projects: Project[] = [
     slug: 'chitalishte-probuda-1990',
     name: 'Читалище „Пробуда - 1990 г.“',
     category: 'Институционален сайт',
-    description: 'Сайт на читалище с цел да представя дейността, инициативите и събитията по ясен и достъпен начин.',
+    description:
+      'Сайт на читалище с цел да представя дейността, инициативите и събитията по ясен и достъпен начин.',
     technologies: ['Next.js', 'TypeScript', 'Accessibility', 'SEO'],
     link: 'https://chitalishteprobuda.com/',
     image: '/images/projects/logo.png',

@@ -1,27 +1,26 @@
-import type { Config } from 'tailwindcss';
+﻿import type { Config } from 'tailwindcss';
 
 const config: Config = {
   content: ['./app/**/*.{ts,tsx}', './components/**/*.{ts,tsx}', './data/**/*.{ts,tsx}', './lib/**/*.{ts,tsx}', './types/**/*.{ts,tsx}'],
   theme: {
     extend: {
       colors: {
-        bg: '#070B14',
-        panel: '#0D1320',
-        panelAlt: '#111A2B',
-        line: 'rgba(148, 163, 184, 0.16)',
-        text: '#EAF0FF',
-        muted: '#9BA9C7',
-        accent: '#7DD3FC',
-        accent2: '#A78BFA',
-        success: '#34D399'
+        bg: 'rgb(var(--color-bg) / <alpha-value>)',
+        panel: 'rgb(var(--color-panel) / <alpha-value>)',
+        panelAlt: 'rgb(var(--color-panel-alt) / <alpha-value>)',
+        line: 'rgba(var(--color-line), 0.16)',
+        text: 'rgb(var(--color-text) / <alpha-value>)',
+        muted: 'rgb(var(--color-muted) / <alpha-value>)',
+        accent: 'rgb(var(--color-accent) / <alpha-value>)',
+        accent2: 'rgb(var(--color-accent-2) / <alpha-value>)',
+        success: 'rgb(var(--color-success) / <alpha-value>)'
       },
       boxShadow: {
         glow: '0 20px 80px rgba(125, 211, 252, 0.12)',
         card: '0 18px 50px rgba(0, 0, 0, 0.35)'
       },
       backgroundImage: {
-        'radial-glow':
-          'radial-gradient(circle at top, rgba(125, 211, 252, 0.16), transparent 35%), radial-gradient(circle at 80% 20%, rgba(167, 139, 250, 0.14), transparent 22%), linear-gradient(180deg, #05070d 0%, #070B14 100%)'
+        'radial-glow': 'var(--bg-radial-glow)'
       },
       keyframes: {
         'loading-letter': {
